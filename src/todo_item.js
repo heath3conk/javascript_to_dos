@@ -1,5 +1,5 @@
-function ToDoItem(task) {
-  this.task = task
+function ToDoItem(taskName) {
+  this.taskName = taskName;
   this.status = "incomplete"
 }
 
@@ -8,7 +8,7 @@ ToDoItem.prototype.changeStatus = function(newStatus) {
 }
 
 ToDoItem.prototype.complete = function() {
-  this.changeStatus("complete")
+  this.changeStatus("complete");
 }
 
 ToDoItem.prototype.isComplete = function() {
@@ -16,10 +16,12 @@ ToDoItem.prototype.isComplete = function() {
 }
 
 ToDoItem.prototype.toString = function() {
-  var currentStatus
+  var currentStatus;
   if (this.status === "complete") {
     currentStatus = "x"
-  else currentStatus = " ";
   }
-  console.log ("[" + currentStatus + "] " + this.task)
+  else {
+    currentStatus = " "
+    }
+  console.log ("[" + currentStatus + "] " + this.taskName);
 }
