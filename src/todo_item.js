@@ -23,5 +23,5 @@ ToDoItem.prototype.toString = function() {
   else {
     currentStatus = " "
     }
-  console.log ("[" + currentStatus + "] " + this.taskName);
+  return ("[" + currentStatus + "] " + this.taskName);
 }
