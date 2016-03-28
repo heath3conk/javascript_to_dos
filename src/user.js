@@ -8,5 +8,7 @@ User.prototype.addList = function(listName) {
 }
 
 User.prototype.showLists = function() {
-
+  for (var list in this.toDoLists) {
+    console.log(list.name);
+  }
 }

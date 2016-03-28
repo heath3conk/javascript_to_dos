@@ -36,10 +36,19 @@ ToDoList.prototype.showCompleteTasks = function() {
   return completes
 }
 
-// this is not working the way I want yet
-ToDoList.prototype.showAllTasks = function() {
+ToDoList.prototype.collectTasksForDisplay = function() {
+  var tasksList = [];
   for (var index in this.tasks) {
     // var displayLine = index.concat(this.tasks[index])
-    console.log(index.toString + this.tasks[index])
+    var taskString = index + this.tasks[index].toString();
+    taskList.push(taskString);
+  }
+  return taskList;
+}
+
+ToDoList.prototype.displayAllTasks = function() {
+  var allTasks = this.collectTasksForDisplay;
+  for (var task in allTasks) {
+    console.log(task);
   }
 }
