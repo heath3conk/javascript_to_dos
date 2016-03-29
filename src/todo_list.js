@@ -1,9 +1,15 @@
+//require todo item
+
 function ToDoList(name_) {
   this.name = name_ || "";
   this.tasks = [];
 }
 
 ToDoList.prototype.add = function(taskName) {
+  //If we wanted to error check, it might look like this
+  if (taskName === "" || typeof taskName === "undefined") {
+    throw "Need a task name!"
+  }
   var newTask = new ToDoItem(taskName);
   this.tasks.push(newTask)
 }

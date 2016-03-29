@@ -1,4 +1,5 @@
-// require files here...somehow
+//Here we pull User out of user.js' exports
+var User = require("./user.js").User;
 
 var heath = new User("heather");
 

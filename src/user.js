@@ -1,3 +1,5 @@
+//require todolist
+
 function User(username) {
   this.username = username
   this.toDoLists = []
@@ -12,3 +14,6 @@ User.prototype.showLists = function() {
     console.log(list.name);
   }
 }
+
+// exports is automagically an empty object, {}
+exports.User = User;
